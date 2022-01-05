@@ -76,6 +76,12 @@ public class Address {
     private String country;
 
     /**
+     * Map to 'Parking' Entity
+     */
+    @OneToOne(mappedBy = "parkingAddress")
+    private Parking parking;
+
+    /**
      * Default constructor
      */
     public Address() {
