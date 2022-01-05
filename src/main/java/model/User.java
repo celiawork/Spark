@@ -8,44 +8,7 @@ import java.util.Date;
  */
 @Entity
 @Table (name = "UTILISATEUR")
-public class User {
-
-    /**
-     * id : "id_utilisateur"
-     * type : long
-     */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)  // AutoIncremental
-    private long id_utilisateur;
-
-    /**
-     * 'lastName' -> 'NOM'
-     * Max length of 255 'car' (default) && not NULL
-     */
-    @Column(name = "NOM", length = 255, nullable = false)
-    private String lastName;
-
-    /**
-     * 'firstName' -> 'PRENOM'
-     * Max length of 50 'car' && not NULL
-     */
-    @Column(name = "PRENOM", length = 50, nullable = false)
-    private String firstName;
-
-    /**
-     * 'userEmail' -> 'EMAIL'
-     * Max length of 50 'car' && not NULL
-     */
-    @Column(name = "EMAIL", length = 50, nullable = false)
-    private String userEmail;
-
-    /**
-     * 'userPwd' -> 'MOT_DE_PASSE'
-     * Max length of 255 'car' (default) && not NULL
-     */
-    @Column(name = "MOT_DE_PASSE", length = 50, nullable = false)
-    private String userPwd;
+public class User extends Person{
 
     /**
      * 'numberOfSparks' -> 'NOMBRE_SPARK'
@@ -76,43 +39,11 @@ public class User {
     }
 
     public long getId_utilisateur() {
-        return id_utilisateur;
+        return Person.getIdUtilisateur();
     }
 
     public void setId_utilisateur(long id_utilisateur) {
-        this.id_utilisateur = id_utilisateur;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getUserEmail() {
-        return userEmail;
-    }
-
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
-
-    public String getUserPwd() {
-        return userPwd;
-    }
-
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
+        Person.setIdUtilisateur(id_utilisateur);
     }
 
     public Double getNumberOfSparks() {

@@ -15,8 +15,8 @@ public class Address {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)  // AutoIncremental
-    private long id_adresse;
+    @Column(name = "id_adresse", nullable = false)  // AutoIncremental
+    private long idAdresse;
 
     /**
      * 'number' -> 'NUMERO'
@@ -84,11 +84,11 @@ public class Address {
     }
 
     public long getId_adresse() {
-        return id_adresse;
+        return idAdresse;
     }
 
     public void setId_adresse(long id_adresse) {
-        this.id_adresse = id_adresse;
+        this.idAdresse = id_adresse;
     }
 
     public String getNumber() {
