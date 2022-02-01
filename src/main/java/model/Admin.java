@@ -6,7 +6,7 @@ import javax.persistence.*;
  * User Entity for SQL table 'ADMINISTRATEUR'
  */
 @Entity
-@Table(name = "ADMINISTRATEUR")
+@Table(name = "ADMINISTRATEURoooooo")
 public class Admin extends Person {
 
     /**

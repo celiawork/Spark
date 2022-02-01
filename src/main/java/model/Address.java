@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Address Entity for SQL table 'ADRESSE'
  */
 @Entity
-@Table(name = "ADRESSE")
+@Table(name = "HOLAAAA")
 public class Address {
 
     /**
